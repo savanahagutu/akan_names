@@ -16,6 +16,7 @@
         </div>
         <form class="form" id="form">
             <div class="form_control">
+                <p id="output"></p>
                 <label>First Name</label>
                 <input type="text" placeholder="John" id="firstname">
                 <i class="fas fa-check-circle"></i>
@@ -45,16 +46,34 @@
                 <input type="radio" id="maleg" name="gender" value="gender" checked="checked">
             </div>
             <div class="form_control">
-                <label>Date</label>
-                <input type="date"  id="date">
+                <label>Year</label>
+                <input type="number"  id="year" placeholder="Enter the year." required
+                min="1980" max="2020">
                 <i class="fas fa-check-circle"></i>
                 <i class="fas fa-check-circle"></i>
                 <small>Error message</small>
             </div>
-            <button type="submit" class="submit-btn" onclick="dayOfBirth()">Your Akan Name</button>
+            <div class="form_control">
+                <label>Month</label>
+                <input type="number"  id="month" placeholder="Enter the month" required min="1" max="12">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form_control">
+                <label>Day</label>
+                <input type="number"  id="day" placeholder="Enter the day" required min="1"
+                max="31">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small>Error message</small>
+            </div>
+            <a type="submit" class="submit-btn" onclick="submission()">Your Akan Name</a>
         </form>
-        <blockquote id="display"></blockquote>
-        <p id="display"></p>
+        <footer>
+            copyright &copy; Akan Limited.<br> 2021
+            
+        </footer>
     </div>
     <script src="./form.js"></script>
 </body>
