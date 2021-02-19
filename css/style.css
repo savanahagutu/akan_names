@@ -43,7 +43,8 @@ body{
 .navbar ul li a{
     text-decoration: none;
     color: black;
-    position: sticky;
+    /*position: sticky;*/
+    display: block;
 }
 
 .content{
@@ -81,4 +82,10 @@ button{
 
 button a{
     text-decoration: none;
+}
+
+@media(min-width= 600px){
+    p{
+        font-size: 1.25rem;
+    }
 }
