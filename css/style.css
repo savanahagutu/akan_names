@@ -84,8 +84,3 @@ button a{
     text-decoration: none;
 }
 
-@media(min-width= 600px){
-    p{
-        font-size: 1.25rem;
-    }
-}
