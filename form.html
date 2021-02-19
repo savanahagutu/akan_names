@@ -38,11 +38,11 @@
             </div>
             <div class="form_control">
                 <label>Female</label>
-                <input type="checkbox"  id="femaleg" name="female" value="gender">
+                <input type="radio"  id="femaleg" name="gender" value="gender" checked="checked">
             </div>
             <div class="form_control">
                 <label>Male</label>
-                <input type="checkbox" id="maleg" name="male" value="gender">
+                <input type="radio" id="maleg" name="gender" value="gender" checked="checked">
             </div>
             <div class="form_control">
                 <label>Date</label>
@@ -53,6 +53,7 @@
             </div>
             <button type="submit" class="submit-btn" onclick="dayOfBirth()">Your Akan Name</button>
         </form>
+        <blockquote id="display"></blockquote>
         <p id="display"></p>
     </div>
     <script src="./form.js"></script>
