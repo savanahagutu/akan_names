@@ -4,8 +4,8 @@ Akan names are derived from Ghanian culture.hese Akan names signify the day one 
 
 
 ## Project Screenshot
-![screenshot1](https://user-images.githubusercontent.com/62004236/108558794-82217f80-730b-11eb-8573-ed26429c0f87.png)
-![screenshot2](https://user-images.githubusercontent.com/62004236/108559066-dfb5cc00-730b-11eb-974a-3c7daffe2f9c.png)
+![screenshot1](https://github.com/savanahagutu/akan_names/assets/87978808/4be3199e-de94-4b70-aa72-739ace9f3323)
+![screenshot2](https://github.com/savanahagutu/akan_names/assets/87978808/d5f2603b-38b5-4c9d-9039-70cdc9e7cc6d)
 
 
 
@@ -43,8 +43,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 ## Contacts
 
 - Incase of any feedback you can reach me through my personal contacts:
-  - agutusavanah01@gmail.com
-  - 0721365789
+  - savanahagutu0102@gmail.com
 
 ## Author
 

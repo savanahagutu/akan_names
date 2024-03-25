@@ -1,5 +1,5 @@
 var submission = function() {
-    var daysOfTheWeek = [
+  var daysOfTheWeek = [
       "Sunday",
       "Monday",
       "Tuesday",
@@ -7,8 +7,8 @@ var submission = function() {
       "Thursday",
       "Friday",
       "Saturday"
-    ];
-    var maleNames = [
+  ];
+  var maleNames = [
       "Kwasi",
       "Kwadwo",
       "Kwabena",
@@ -16,58 +16,45 @@ var submission = function() {
       "Yaw",
       "Kofi",
       "Kwame"
-    ];
-    var femaleNames = [
+  ];
+  var femaleNames = [
       "Akosua",
-       " Adwoa",
+      "Adwoa",
       "Abenaa",
       "Akua",
       "Yaa",
       "Afua",
       "Ama"
-    ];
-    var month = parseInt(document.getElementById("month").value);
-    var year = parseInt(document.getElementById("year").value);
-    var day = parseInt(document.getElementById("date").value);
-    var name =(document.getElementById("name").value);
-    var date0fbirth = new Date(year + "/" + month + "/" + day);
-    var results = date0fbirth.getDay();
-    var output = document.getElementById("output");
-    var male = document.getElementById("maleg")
-    var female = document.getElementById("femaleg")
-    
-    if (month =="" && year =="" && day =="" && name=="") {
-      alert("Please Enter you credentials");
-      return false;
-    }
-   
-   if (year < 0) {
-      output.style.background ="red"
-      output.style.color= "white"
-      output.innerHTML = "Hey! " + name + " please enter a valid year! "
-  }
-    
-  else if ((month < 1) || (month > 31)) {
-      output.style.background ="red"
-      output.style.color= "white"
-      output.innerHTML = "Hey! " + name + " please enter a valid month! "
-  }
-    
-   else if (day < 0 || day > 31) {
-      output.style.background ="red"
-      output.style.color= "white"
-      output.innerHTML = "Hey! " + name + " please enter a valid day! "
-  }
+  ];
+  var firstname = document.getElementById("firstname").value;
+  var lastname = document.getElementById("lastname").value;
+  var email = document.getElementById("email").value;
+  var year = parseInt(document.getElementById("year").value);
+  var month = parseInt(document.getElementById("month").value);
+  var day = parseInt(document.getElementById("day").value);
+  var gender = document.querySelector('input[name="gender"]:checked').value;
+  var output = document.getElementById("output");
   
-  
-    if(male.checked && year > 0 && month > 0 && month < 12 && day > 0 && day < 31) {
-      output.style.background ="lime"
-        output.innerHTML = "Hey! " + name + " you were born on a " + daysOfTheWeek[results] + " and your Akan name is " + maleNames[results];
-    }
-     else if(female.checked && year > 0 && month > 0 && month < 12 && day > 0 && day < 32) {
-      output.style.background ="blue"
-      output.style.background ="red"
-      output.innerHTML = "Hey! " + name + " you were born on a " + daysOfTheWeek[results] + " and your Akan name is " + femaleNames[results];
+  // Validate input fields
+  if (!firstname || !lastname || !email || !year || !month || !day) {
+      output.style.color = "red";
+      output.innerHTML = "Please fill in all the fields.";
+      return;
   }
-  
-  };
+
+  // Validate year, month, and day
+  if (year < 1980 || year > 2020 || month < 1 || month > 12 || day < 1 || day > 31) {
+      output.style.color = "red";
+      output.innerHTML = "Please enter valid date of birth.";
+      return;
+  }
+
+  var dateOfBirth = new Date(year, month - 1, day);
+  var dayOfWeekIndex = dateOfBirth.getDay();
+
+  // Determine Akan name based on gender
+  var akanName = (gender === "male") ? maleNames[dayOfWeekIndex] : femaleNames[dayOfWeekIndex];
+
+  output.style.color = "green";
+  output.innerHTML = "Hey, " + firstname + " " + lastname + "! You were born on a " + daysOfTheWeek[dayOfWeekIndex] + ", and your Akan name is " + akanName + ".";
+};
